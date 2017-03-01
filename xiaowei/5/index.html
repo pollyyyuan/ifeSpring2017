@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>小薇学院-任务五</title>
+	<style>
+		html,body,ul,li,div,table,tr,th,td,input,span,button,p{
+			margin: 0;
+			padding: 0;
+		}
+		ul li{
+			list-style: none;
+		}
+		body{
+			width: 1282px;
+			margin:0 auto;
+			background-color: #DEDEDE;
+		}
+		nav{
+			width: 100%;
+			height: 60px;
+			background-color: #333333;
+			position: relative;
+		}
+		nav .logo{
+			position: absolute;
+			left:37px;
+			top:10px;
+			width: 120px;
+			height: 38px;
+		}
+		nav ul{
+			position: absolute;
+			right: 24px;
+			top: 0;
+			font: 14px/60px 'microsoft yahei';
+		}
+		nav li{
+			position: relative;
+			float: left;
+			padding-left: 20px;
+		}
+		nav li::before{
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 7px;
+			width: 6px;
+			height: 6px;
+			margin-top: -3px;
+			background-color: #020202;
+			border-radius: 50%;
+		}
+		nav ul a{
+			text-decoration: none;
+			color: #fff;
+		}
+		nav ul a.active{
+			color: #92A59F;
+		}
+		.contain{
+			background-color: #DEDEDE;
+			position: relative;
+			padding: 20px;
+		}
+		.page,aside{
+			border: 1px solid #CDCDCD;
+			background-color: #fff;
+			box-shadow: 0 1px 2px #848484;
+		}
+		aside{
+			position: absolute;
+			right: 20px;
+			top: 20px;
+			width: 322px;
+			padding: 20px;
+		}
+		aside h2{
+			padding-left: 14px;
+			position: relative;
+		}
+		aside h2::before{
+			content: '';
+			position: absolute;
+			left:0;
+			top: 0;
+			width: 3px;
+			height: 100%;
+			background-color: #CCCCCC;
+		}
+		aside ul .left{
+			display: inline-block;
+			width: 96px;
+			text-align: right;
+		}
+		aside ul .right{
+			width: 190px;
+			display: inline-block;
+			margin-left: 13px;
+		}
+		aside li{
+			height: 38px;
+			font-size: 12px;
+			line-height: 38px;
+		}
+		aside input{
+			padding-left: 3px;
+			height: 20px;
+			line-height: 20px;
+		}
+		aside .info{
+			color: #B4A193;
+			font-size: 13px;
+		}
+		aside textarea{
+			width: 200px;
+			height: 99px;
+		}
+		aside li.btn{
+			width: 100%;
+			margin-top: 80px;
+		}
+		aside li.btn button{
+			width: 100%;
+			height: 40px;
+			border-radius: 6px;
+			background-color: #3355D0;
+			border: 0;
+			font: 14px/40px 'microsoft yahei';
+			color: #fff;
+		}
+		main{
+			margin-right: 382px;
+		}
+		.page{
+			margin-bottom: 20px;
+			padding: 40px 27px 40px 21px;
+		}
+		.page h3,.page h4,.page h5,.page h6{
+			color: #616662;
+		}
+		#page4 table{
+			width: 100%;
+			border-top: 1px solid #CCCCCC;
+			border-left: 1px solid #CCCCCC;
+		}
+		#page4 td{
+			border-right: 1px solid #CCCCCC;
+			border-bottom: 1px solid #CCCCCC;
+			height: 24px;
+			line-height: 24px;
+			padding-left: 6px;
+		}
+		#page4 tr:nth-child(1){
+			background-color: #343434;
+			color: #fff;
+		}
+		#page4 tr:nth-last-child(1){
+			background-color: #CCCCCC;
+		}
+		
+		footer{
+			height: 48px;
+			width: 100%;
+			background-color: #000000;
+			padding-top: 22px;
+		}
+		footer p{
+			color: #fff;
+			text-align: center;
+			font-family: 'microsoft yahei';
+		}
+	</style>
+</head>
+<body>
+	<nav>
+		<div class="logo">
+			<img src="img/logo.jpg" alt="">
+		</div>
+		<ul>
+			<li><a href="#">导航链接一</a></li>
+			<li><a href="#">导航链接二</a></li>
+			<li><a href="#">导航链接三</a></li>
+			<li><a href="#" class="active">导航链接四</a></li>
+		</ul>
+	</nav>
+	<div class="contain">
+		<aside>
+
+			<h2>这里以后是一个侧栏，这是侧栏的标题</h2>
+			<h5>侧栏注册窗口标题</h5>
+			<ul>
+				<li>
+					<span class="left"><label for="input1">请输入邮箱地址</label></span>
+					<span class="right">
+						<input type="text" value="这是一个文本输入框" id="input1">
+					</span>
+				</li>
+				<li>
+					<span class="left"></span>
+					<span class="right">
+						<p class="info">邮箱地址请按要求格式输入</p>
+					</span>
+				</li>
+				<li>
+					<span class="left"><label for="input2">请输入密码</label></span>
+					<span class="right">
+						<input type="password" value="12345678" id="input2">
+					</span>
+				</li>
+				<li>
+					<span class="left"><label for="input3">请重复输入密码</label></span>
+					<span class="right">
+						<input type="password" value="12345678" id="input3">
+					</span>
+				</li>
+				<li>
+					<span class="left"></span>
+					<span class="right">
+						<p class="info">密码请为6-16位英文数字</p>
+					</span>
+				</li>
+				<li>
+					<span class="left"><label>性别</label></span>
+					<span class="right">
+						<input type="radio" name="sex">男
+						<input type="radio" name="sex">女
+					</span>
+				</li>
+				<li>
+					<span class="left"><label>城市</label></span>
+					<span class="right">
+						<select>
+							<option>北京</option>
+						</select>
+					</span>
+				</li>
+				<li>
+					<span class="left"><label>爱好</label></span>
+					<span class="right">
+						<input type="checkbox">运动
+						<input type="checkbox">艺术
+						<input type="checkbox">科学
+					</span>
+				</li>
+				<li>
+					<span class="left"><label>个人描述</label></span>
+					<span class="right">
+						<textarea  value="这是一个多行输入框，输入你的个人描述"></textarea>
+					</span>
+				</li>
+				<li class="btn">
+					<button>确认提交</button>
+				</li>
+			</ul>
+		</aside>
+		<main>
+		<section class="page">
+			<h2>文章一级标题</h2>
+			<h3>文章二级标题</h3>
+			<h5>文章作者&nbsp;文章发表时间</h5>
+			<p>这是一个很长很长的段落,这是一个很长很长的段落,这是一个很长很长的段落,这是一个很长很长的段落</p>
+			<p>换行了</p>
+			<p>的段落,这是一个很长很长的段落,这是一个很长很长的段落,的段落,这是一个很长很		长的段落,<a href="http://ife.baidu.com">这里有一个链接链接到http://		ife.baidu.com</a>,这是一个很长很长的段落,的段落,这是一个很长很长的段落,这是一		个很长很长的段落。</p>
+			<img src="img/1.jpg" alt="" width="100px" height="100px">
+			<p>这是一个很长很长的段落,这是一个很长很长的段落,这是一个很长很长的段落,这是		一个很长很长的段落</p>
+			<p>这是一个很长很长的段落,换行了</p>
+			<p>的段落,这是一个很长很长的段落,这是一个很长很长的段落,的段落,这是一个很长很		长的段落,<a href="http://ife.baidu.com">这里有一个链接链接到http://		ife.baidu.com</a>,这是一个很长很长的段落,的段落,这是一个很长很长的段落,这是一个很长很长的段落。</p>
+		</section>
+		<section class="page">
+			<h2>另一篇文章一级标题</h2>
+			<h3>文章二级标题</h3>
+			<h6>文章作者&nbsp;文章发表时间</h6>
+			<p>这是一个很长很长的段落,这是一个很长很长的段落,这是一个很长很长的段落,这是		一个很长很长的段落</p>
+			<p>换行了</p>
+			<p>的段落,这是一个很长很长的段落,这是一个很长很长的段落,的段落,这是一个很长很		长的段落,<a href="http://ife.baidu.com">这里有一个链接链接到http://		ife.baidu.com</a>,这是一个很长很长的段落,的段落,这是一个很长很长的段落,这是一		个很长很长的段落。</p>
+			<img src="img/1.jpg" alt="" width="100px" height="100px">
+			<ul>
+				<li>列表项目一</li>
+				<li>列表项目二</li>
+				<li>列表项目三</li>
+			</ul>
+		</section>
+		<section class="page">
+			<h1>图片</h1>
+			<p>好看的图片</p>
+			<img src="img/1.jpg" alt="" width="100px" height="100px">
+			<p>好看的图片</p>
+			<img src="img/1.jpg" alt="" width="100px" height="100px">
+			<p>好看的图片</p>
+			<img src="img/1.jpg" alt="" width="100px" height="100px">
+			<p>好看的图片</p>
+			<img src="img/1.jpg" alt="" width="100px" height="100px">
+			<p>好看的图片</p>
+			<img src="img/1.jpg" alt="" width="100px" height="100px">
+			<p>好看的图片</p>
+			<img src="img/1.jpg" alt="" width="100px" height="100px">
+			<p>好看的图片</p>
+			<img src="img/1.jpg" alt="" width="100px" height="100px">
+			<p>好看的图片</p>
+			<img src="img/1.jpg" alt="" width="100px" height="100px">
+			<p>好看的图片</p>
+			<img src="img/1.jpg" alt="" width="100px" height="100px">
+			<p>好看的图片</p>
+			<img src="img/1.jpg" alt="" width="100px" height="100px">
+		</section>
+		<section class="page" id="page4">
+			<h2>最后一篇文章一级标题</h2>
+			<h3>文章二级标题</h3>
+			<p>文章作者&nbsp;文章发表时间</p>
+			<ol>
+				<li>排名1</li>
+				<li>排名2</li>
+				<li>排名3</li>
+			</ol>
+			<p>下面是一个表格,给表格加了一个border="1"好让你看出是一个表格</p>
+			<table>
+				<tr>
+					<td>表头</td>
+					<td>表头</td>
+					<td>表头</td>
+				</tr>
+				<tr>
+					<td>表内容单元格</td>
+					<td>表内容单元格</td>
+					<td><a href="#">操作</a></td>
+				</tr>
+				<tr>
+					<td>表内容单元格</td>
+					<td>表内容单元格</td>
+					<td><a href="#">操作</a></td>
+				</tr>
+				<tr>
+					<td>表内容单元格</td>
+					<td>表内容单元格</td>
+					<td><a href="#">操作</a></td>
+				</tr>
+				<tr>
+					<td>表内容单元格</td>
+					<td>表内容单元格</td>
+					<td><a href="#">操作</a></td>
+				</tr>
+				<tr>
+					<td>总计</td>
+					<td colspan="2">1000</td>
+				</tr>
+			</table>
+		</section>	
+		</main>
+	</div>
+	<footer>
+			<p>版权所有</p>
+	</footer>
+</body>
+</html>
