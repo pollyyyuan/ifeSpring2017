@@ -1,0 +1,73 @@
+html,body{
+	margin: 0;
+	padding: 0;
+}
+body{
+	padding: 10px;
+}
+.row{
+	margin: 10px 0;
+	display: flex;
+}
+[class*='col']{
+	margin: 0 10px;
+	background-color: #eee;
+	height: 46px;
+	border: 1px solid #999;
+}
+.col-b-1{
+	flex: 1;
+}
+.col-b-2{
+	flex: 2;
+}
+.col-b-3{
+	flex: 3;
+}
+.col-b-4{
+	flex: 4;
+}
+.col-b-5{
+	flex: 5;
+}
+.col-b-6{
+	flex: 6;
+}
+.b-none{
+	display: none;
+}
+@media (max-width: 768px){	
+.col-m-1{
+	flex: 1;
+}
+.col-m-2{
+	flex: 2;
+}
+.col-m-3{
+	flex: 3;
+}
+.col-m-4{
+	flex: 4;
+}
+.col-m-5{
+	flex: 5;
+}
+.col-m-6{
+	flex: 6;
+}
+.col-m-8{
+	flex: 8;
+}
+.col-m-12{
+	flex:12;
+}
+.none{
+	display: none;
+}
+.b-none{
+	display: flex;
+}
+.opacity{
+	opacity: 0;
+}
+}
