@@ -1,0 +1,173 @@
+
+/*css init*/
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img { margin:0; padding:0; }
+fieldset, img,input,button { border:none; padding:0;margin:0;outline-style:none; }
+ul, ol,li { list-style:none; }
+input { padding-top:0; padding-bottom:0; font-family: "SimSun","宋体";}
+select, input { vertical-align:middle;}
+select, input, textarea { margin:0; }
+textarea { resize:none; } 
+img {border:0;	vertical-align:middle; }
+table { border-collapse:collapse; }
+.clearfix:before,.clearfix:after {
+    content:"";
+    display:table;
+}
+.clearfix:after{clear:both;}
+.clearfix{
+    *zoom:1;/*IE/7/6*/
+}
+a {text-decoration:none; color: #111;}
+h1,h2,h3,h4,h5,h6 {text-decoration:none;font-weight:normal;font-size:100%;}
+s,i,em{font-style:normal;text-decoration:none;}
+
+/*start*/
+html,body{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+body{
+	font: 12px/12px Arial,'microsoft yahei';
+}
+/*.layout{
+	position: relative;
+	width: 1280px;
+	margin: 0 auto;
+}*/
+
+/*header*/
+.header{
+	height: 55px;
+	width: 100%;
+	background-color: #2189C0;
+	position: relative;
+}
+.header .logo-box{
+	position: absolute;
+	top: 10px;
+	left: 50px;
+}
+.header .search-box{
+	position: absolute;
+	height: 100%;
+	right: 90px;
+	top: 15px;
+}
+.header .search-box .search{
+	float: left;
+	width: 312px;
+	height: 26px;
+	background-color: #fff;
+	border-radius: 15px;
+	position: relative;
+}
+.search i{
+	position: absolute;
+	left: 15px;
+	top: 15px;
+}
+.search input{
+	margin-left: 40px;
+	width: 250px;
+	height: 26px;
+	line-height: 26px;
+}
+.header .search-box .login{
+	float: left;
+	margin-left: 20px;
+	font: 14px/26px 'microsoft yahei';
+	color: #fff;
+}
+
+/*content*/
+.content{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	position: relative;
+}
+/*sidebar*/
+.content .sidebar{
+	position: absolute;
+	width: 260px;
+	top: 0;
+	left: 0;
+	height: 100%;
+	background-color: #2B2E3D;
+}
+.sidebar .personal-info{
+	padding: 18px 0;
+}
+.personal-info .personal-photo{
+	height: 58px;
+}
+.personal-photo .photo{
+	float: left;
+	margin-left: 45px;
+	width: 56px;
+	height: 56px;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	position: relative;
+}
+.personal-photo .photo::before{
+	content: '';
+	position: absolute;
+	top: 4px;
+	left: 4px;
+	width: 48px;
+	height: 48px;
+	background-color: #B9BABE;
+	border-radius: 50%;
+}
+.personal-info .personal-title{
+	display: inline-block;
+	margin-left: 18px;
+	font: 14px/58px 'microsoft yahei';
+	color: #E2E4E3;
+}
+.personal-info .personal-fans{
+	margin: 20px 48px 0 20px;
+	display: flex;
+}
+.personal-fans .col{
+	flex: 1;
+	text-align: center;
+}
+.personal-fans .col span{
+	display: block;
+	width: 100%;
+	color: #6E8096;
+	line-height: 14px;
+}
+.sidebar .menu-box{
+	color: #6F7F96;
+}
+.menu-box .folder-box{
+	background: rgba(56,62,78,.5);
+	padding-bottom: 10px;
+}
+.menu-box .menu-title{
+	line-height: 40px;
+	padding-left: 45px;
+}
+.menu-box .folder-box h3{
+	line-height: 22px;
+	padding-left: 64px;
+}
+.menu-box .folder-box li{
+	line-height: 30px;
+	padding-left: 100px;
+}
+
+/*main*/
+.content .main{
+	flex: 1;
+	background-color: #EDEDED;
+}
+.main .map{
+	width: 100%;
+	background-color: #fff;
+	height: 30px;
+}
