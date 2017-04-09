@@ -25,10 +25,11 @@ s,i,em{font-style:normal;text-decoration:none;}
 html,body{
 	width: 100%;
 	height: 100%;
-	overflow: hidden;
+	overflow:hidden;
 }
 body{
 	font: 12px/12px Arial,'microsoft yahei';
+	overflow-y:scroll;
 }
 /*.layout{
 	position: relative;
@@ -83,16 +84,14 @@ body{
 /*content*/
 .content{
 	width: 100%;
-	height: 100%;
-	display: flex;
+	height: 120%;
+	/*display: flex;*/
 	position: relative;
 }
 /*sidebar*/
 .content .sidebar{
-	position: absolute;
 	width: 260px;
-	top: 0;
-	left: 0;
+	position: absolute;
 	height: 100%;
 	background-color: #2B2E3D;
 }
@@ -163,11 +162,354 @@ body{
 
 /*main*/
 .content .main{
-	flex: 1;
+	/*flex: 1;*/
+	margin-left: 260px;
+	height: 100%;
 	background-color: #EDEDED;
 }
 .main .map{
 	width: 100%;
 	background-color: #fff;
 	height: 30px;
+	box-sizing: border-box;
+	padding-left: 30px;
+	color: #B7B7B7;
 }
+.main .map span{
+	line-height: 30px;
+	padding: 10px;
+}
+.active{
+	color:#2189C0;
+}
+.main .layout{
+	margin: 20px 70px 0 60px;
+}
+/*search-box*/
+.layout .search-box{
+	border: 1px solid #DEDDE2;
+	background-color: #fff;
+	padding: 15px 30px 11px;
+	margin-bottom: 10px;
+	/*min-width: 960px;*/
+}
+.search-box .row{
+	display: flex;
+	line-height: 26px;
+	margin-bottom: 4px;
+}
+.search-box .col{
+	flex: 2;
+}
+.search-box .col-2{
+	flex: 3;
+}
+.search-box span.title{
+	padding-right: 15px;
+	color: #B6B6B6;
+}
+.search-box select{
+	font: 12px/26px 'microsoft yahei';
+	height: 26px;
+	border-color: #CBCBCB;
+}
+.search-box select.select-1{
+	width: 68px;
+}
+.search-box select.select-2{
+	width: 118px;
+}
+.search-box .haoshi .title{
+	padding-right: 5px; 
+}	
+.search-box .btn{
+	padding-left: 30px;
+	padding-top: 16px;
+}
+.search-box .btn button{
+	width: 50px;
+	height: 25px;
+	background-color: #398AC1;
+	color: #fff;
+	border-radius: 2px;
+}
+/*slide-box*/
+.layout .slide-box{
+	height: 64px;
+	width: 100%;
+	margin-bottom: 16px;
+}
+.slide-box .col{
+	width: 110px;
+	height: 62px;
+	background-color: #fff;
+	margin-right: 5px;
+	line-height: 62px;
+	border: 1px solid #DADBDD;
+	float: left;
+}
+.slide-box .col.active{
+	position: relative;
+}
+.slide-box .col.active::before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 4px;
+	background-color: #4388C9;
+}
+.slide-box .btn{
+	width: 30px;
+	text-align: center;
+	font: 16px/62px 'microsoft yahei';
+	color: #AEAEAE;
+}
+.slide-box h2{
+	margin-top: 10px;
+	margin-bottom: 12px;
+	font: 700 10px/10px 'microsoft yahei';
+	color: #111;
+	text-align: center;
+}
+.slide-box h3{
+	font: 700 16px/16px 'microsoft yahei';
+	color: #EC6702;
+	text-align: center;
+}
+.slide-box h3 span{
+	font-size: 11px;
+	color: #AAAAAA;
+}
+.slide-box .col.history{
+	width: 136px;
+	margin-right: 0;
+	text-align: center;
+}
+/*graphic-bo*/
+.layout .graphic-bo{
+	margin-bottom: 14px;
+}
+.graphic-bo .title{
+	font: 700 12px/22px 'microsoft yahei';
+}
+.graphic-bo .row{
+	display: flex;
+	/*min-width: 1000px;*/
+	height: 70px;
+}
+.graphic-bo .row .col{
+	flex: 1;
+	margin-right: 28px;
+	background-color: #fff;
+	position: relative;
+	border: 1px solid #D3D4D8;
+}
+.graphic-bo .row .col::before{
+	content:'';
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	width: 4px;
+}
+.graphic-bo .row h2,.graphic-bo .row h3{
+	padding-left: 12px;
+}
+.graphic-bo .row h2{
+	margin-top: 12px;
+	font: 12px/28px 'microsoft yahei';
+}
+.graphic-bo .row h3{
+	font: 10px/20px 'Microsoft yahei';
+	color: #B6B6B6;
+}
+.graphic-bo .row .img{
+	position: absolute;
+	width: 60px;
+	height: 46px;
+	top: 12px;
+	right: 15px;
+}
+.graphic-bo .row .c4{
+	margin-right: 0;
+}
+.graphic-bo .row .c1::before,.graphic-bo .row .c1 .img{
+	background-color: #43B29F;
+}
+.graphic-bo .row .c2::before,.graphic-bo .row .c2 .img{
+	background-color: #398AC1;
+}
+.graphic-bo .row .c3::before,.graphic-bo .row .c3 .img{
+	background-color: #CF4B36;
+}
+.graphic-bo .row .c4::before,.graphic-bo .row .c4 .img{
+	background-color: #E1CD46;
+}
+/*item-box*/
+.layout .item-box{
+	/*display: flex;*/
+	padding-bottom: 100px;
+}
+.item-box .col-box{
+	margin-right: 10px;
+	float: left;
+	/*background-color: #fff;*/
+	/*flex: 1;*/
+}
+.col-box .title{
+	height: 48px;
+	border: 1px solid #D1D2D6;
+	border-bottom: 0;
+	background-color: #F4F5F7;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	padding-left: 20px;
+	color: #B0B0B0;
+	font-size: 12px;
+	line-height: 48px;
+}
+.col-box .col-content{
+	box-sizing: border-box;
+	background-color: #fff;
+	border: 1px solid #D1D2D6;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	width: 100%;
+	height: 330px;
+}
+/*col-box1*/
+.col-box1{
+	width: 530px;
+	box-sizing: border-box;
+}
+.col-box1 .col-content{
+	padding: 12px 20px 22px;
+	width: 100%;
+}
+.col-box1 .col-content .tab-box{
+	height: 28px;
+	width: 100%;
+}
+.tab-box li{
+	float: left;
+	margin-right: 5px;
+	width: 82px;
+	height: 26px;
+	text-align: center;
+	line-height: 26px;
+}
+.tab-box li a{
+	position: relative;
+	display: block;
+	z-index: 9;
+	width: 100%;
+	height: 100%;
+	border: 1px solid #EDECF1; 
+	background-color: #EDECF1;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.tab-box li a::after{
+	content: '';
+	position: absolute;
+	bottom: -1px;
+	left: 0;
+	right: 0;
+	height: 1px;
+	background-color: #ccc;
+}
+.tab-box li a.active{
+	background-color: #fff;
+	border-color: #ccc;
+}
+.tab-box li a.active::after{
+	background-color: #fff;
+}
+.col-box1 .col-content .tab-content{
+	border: 1px solid #ccc;
+	width: 100%;
+	padding-top: 28px;
+	padding-bottom: 36px;
+}
+.tab-content table{
+	margin-left: 36px;
+}
+.tab-content td{
+	width: 98px;
+	height: 28px;
+	border: 1px solid #ccc;
+	text-align: center;
+	line-height: 28px;
+}
+.tab-content td.active{
+	background-color: #F4F5F7;
+	color: #111;
+}
+/*col-box2*/
+.item-box .col-box2{
+	width: 419px;
+	margin-right: 0;
+}
+.col-box2 .col-content{
+	box-sizing: border-box;
+	padding: 12px 36px 24px;
+}
+.col-box2 .row{
+	border-bottom: 1px solid #E7E7E7;
+	padding-top: 5px;
+	padding-bottom: 8px;
+}
+.col-box2 h3{
+	font: 12px/12px 'microsoft yahei';
+	color: #D7D7D7;
+	padding-left: 14px;
+}
+.col-box2 span,.col-box2 p{
+	font: 14px/30px 'microsoft yahei';
+	padding-left: 14px;
+	color: #111;
+}
+.col-box2 .price-box{
+	height: 58px;
+	box-sizing: border-box;
+}
+.price-box .left{
+	float: left;
+	width: 110px;
+	position: relative;
+}
+.price-box .right{
+	width: 230px;
+}
+.price-box .right::before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 1px;
+	background-color: #E7E7E7;
+}
+.col-box2 .info-box p{
+	height: 124px;
+}
+.col-box2 .btn-box{
+	border: 0;
+	position: relative;
+}
+.col-box2 .btn-box h3{
+	line-height: 24px;
+}
+.col-box2 .btn-box button{
+	position: absolute;
+	top: 5px;
+	right: 0;
+	background-color: #3A8BC2;
+	color: #fff;
+	width: 50px;
+	height: 25px;
+	border-radius: 5px;
+}
+
