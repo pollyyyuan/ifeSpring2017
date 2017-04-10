@@ -183,7 +183,9 @@ body{
 	color:#2189C0;
 }
 .main .layout{
-	margin: 20px 70px 0 60px;
+	width: 890px;
+	margin: 20px auto;
+	/*margin: 20px 70px 0 60px;*/
 }
 /*search-box*/
 .layout .search-box{
@@ -191,7 +193,6 @@ body{
 	background-color: #fff;
 	padding: 15px 30px 11px;
 	margin-bottom: 10px;
-	/*min-width: 960px;*/
 }
 .search-box .row{
 	display: flex;
@@ -203,6 +204,9 @@ body{
 }
 .search-box .col-2{
 	flex: 3;
+}
+.search-box .col-3{
+	flex: 4;
 }
 .search-box span.title{
 	padding-right: 15px;
@@ -283,7 +287,7 @@ body{
 	color: #AAAAAA;
 }
 .slide-box .col.history{
-	width: 136px;
+	width: 112px;
 	margin-right: 0;
 	text-align: center;
 }
@@ -350,7 +354,8 @@ body{
 /*item-box*/
 .layout .item-box{
 	/*display: flex;*/
-	padding-bottom: 100px;
+	height: 364px;
+	margin-bottom: 10px;
 }
 .item-box .col-box{
 	margin-right: 10px;
@@ -377,7 +382,7 @@ body{
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
 	width: 100%;
-	height: 330px;
+	height: 314px;
 }
 /*col-box1*/
 .col-box1{
@@ -449,7 +454,7 @@ body{
 }
 /*col-box2*/
 .item-box .col-box2{
-	width: 419px;
+	width: 350px;
 	margin-right: 0;
 }
 .col-box2 .col-content{
@@ -477,11 +482,11 @@ body{
 }
 .price-box .left{
 	float: left;
-	width: 110px;
+	width: 94px;
 	position: relative;
 }
 .price-box .right{
-	width: 230px;
+	/*width: 186px;*/
 }
 .price-box .right::before{
 	content: '';
@@ -512,4 +517,60 @@ body{
 	height: 25px;
 	border-radius: 5px;
 }
+/*calender*/
+.calender .col-content{
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.calender .select-box{
+	padding-bottom: 10px;
+	border-bottom: 1px solid #A8CFEC;
+	display: flex;
+}
+.select-box button,.select-box select{
+	border-color: #CBCBCB;
+	flex:1;
+	margin-right: 6px;
+	line-height: 22px;
+	text-align: center;
+}
+.select-box button{
+	margin-right: 0;
+	background-color: #fff;
+	border: 1px solid #CBCBCB;
+	font-size: 12px;
+}
+.calender .calender-box{
 
+}
+.calender-box .week{
+	height: 30px;
+	border-bottom: 1px solid #E1E1E1;
+}
+.week ul,.date ul{
+	display: flex;
+}
+.week li{
+	flex: 1;
+	text-align: center;
+	line-height: 30px;
+	margin: 0 5px;
+}
+.calender-box .date{
+	padding: 2px 0;
+	height: 40px;
+}
+.date li{
+	flex: 1;
+	margin: 0 5px;
+	height: 100%;
+	box-sizing: border-box;
+	padding: 5px 0;
+	text-align: center;
+}
+.date .num{
+	font-size: 10px/10px 'microsoft yahei';
+}
+.date span.memo{
+	font-size: 12px/16px 'microsoft yahei';
+}
