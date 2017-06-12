@@ -6,7 +6,7 @@ ul, ol,li { list-style:none; }
 input { padding-top:0; padding-bottom:0; font-family: "SimSun","宋体";}
 select, input { vertical-align:middle;}
 select, input, textarea { margin:0; }
-textarea { resize:none; } 
+textarea { resize:none; }
 img {border:0;	vertical-align:middle; }
 table { border-collapse:collapse; }
 .clearfix:before,.clearfix:after {
@@ -25,6 +25,7 @@ s,i,em{font-style:normal;text-decoration:none;}
 html,body{
 	width: 100%;
 	height: 100%;
+  background-color: #EDEDED;
 	overflow:hidden;
 }
 body{
@@ -92,7 +93,7 @@ body{
 .content .sidebar{
 	width: 260px;
 	position: absolute;
-	height: 100%;
+	/*height: 100%;*/
 	background-color: #2B2E3D;
 }
 .sidebar .personal-info{
@@ -224,8 +225,8 @@ body{
 	width: 118px;
 }
 .search-box .haoshi .title{
-	padding-right: 5px; 
-}	
+	padding-right: 5px;
+}
 .search-box .btn{
 	padding-left: 30px;
 	padding-top: 16px;
@@ -411,7 +412,7 @@ body{
 	z-index: 9;
 	width: 100%;
 	height: 100%;
-	border: 1px solid #EDECF1; 
+	border: 1px solid #EDECF1;
 	background-color: #EDECF1;
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
@@ -540,8 +541,8 @@ body{
 	border: 1px solid #CBCBCB;
 	font-size: 12px;
 }
-.calender .calender-box{
-
+.calender.col-box2{
+  margin-right: 10px;
 }
 .calender-box .week{
 	height: 30px;
@@ -562,15 +563,160 @@ body{
 }
 .date li{
 	flex: 1;
-	margin: 0 5px;
+	/*margin: 0 5px;*/
 	height: 100%;
 	box-sizing: border-box;
 	padding: 5px 0;
 	text-align: center;
 }
 .date .num{
-	font-size: 10px/10px 'microsoft yahei';
+	font: 10px/12px 'microsoft yahei';
+	display: block;
+	padding: 0;
 }
 .date span.memo{
-	font-size: 12px/16px 'microsoft yahei';
+	font: 12px/16px 'microsoft yahei';
+	display: block;
+	padding: 0;
+}
+.date span.redColor{
+  color: #D24B51;
+  font-weight: 700;
+}
+.date li.ed{
+  border: 1px solid #F5C72C;
+}
+.chart.col-box1{
+  margin-right: 0;
+}
+/*chart*/
+.chart .col-content{
+  padding: 18px 40px 24px;
+}
+.chart .col-content .tab-content{
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+.chart .col-content .tab-content table{
+  margin-left: 0;
+}
+.chart .tab-content .last{
+  width: 290px;
+  text-align: left;
+  padding-left: 34px;
+  position: relative;
+}
+.chart .num{
+}
+.chart .progress{
+  display: inline-block;
+  background-color: #DDDDDD;
+  margin-left: 20px;
+  width: 150px;
+  height: 5px;
+  position: absolute;
+  top: 12px;
+}
+.chart .progress .ed1{
+  background-color: #ED6D52;
+  width: 85%;
+  height: 5px;
+}
+.chart .progress .ed2{
+  background-color: #ED8152;
+  width: 75%;
+  height: 5px;
+}
+.chart .progress .ed3{
+  background-color: #F19E4E;
+  width: 70%;
+  height: 5px;
+}
+.chart .progress .ed4{
+  background-color: #7FCAF1;
+  width: 65%;
+  height: 5px;
+}
+.chart .progress .ed5{
+  background-color: #7FCAF1;
+  width: 60%;
+  height: 5px;
+}
+.chart .progress .ed6{
+  background-color: #7FCAF1;
+  width: 55%;
+  height: 5px;
+}
+.chart .progress .ed7{
+  background-color: #7FCAF1;
+  width: 50%;
+  height: 5px;
+}
+.chart .progress .ed8{
+  background-color: #7FCAF1;
+  width: 45%;
+  height: 5px;
+}
+.chart .progress .ed9{
+  background-color: #7FCAF1;
+  width: 40%;
+  height: 5px;
+}
+.chart .progress .ed10{
+  background-color: #7FCAF1;
+  width: 35%;
+  height: 5px;
+}
+/*font*/
+@font-face {
+  font-family: 'icomoon';
+  src:  url('font/icomoon.eot?7c7x1k');
+  src:  url('font/icomoon.eot?7c7x1k#iefix') format('embedded-opentype'),
+    url('font/icomoon.ttf?7c7x1k') format('truetype'),
+    url('font/icomoon.woff?7c7x1k') format('woff'),
+    url('font/icomoon.svg?7c7x1k#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-profile:before {
+  content: "\e923";
+}
+.icon-folder:before {
+  content: "\e92f";
+}
+.icon-calendar:before {
+  content: "\e953";
+  color: #3789C1;
+}
+.icon-user:before {
+  content: "\e971";
+}
+.icon-search:before {
+  content: "\e986";
+}
+.icon-point-right:before {
+  content: "\ea04";
+}
+.icon{
+  margin-right: 5px;
+}
+.icon-calendar{
+  width: 30px;
 }
