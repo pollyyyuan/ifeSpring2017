@@ -1,0 +1,151 @@
+/*css init*/
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img { margin:0; padding:0; }
+fieldset, img,input,button { border:none; padding:0;margin:0;outline-style:none; }
+ul, ol,li { list-style:none; }
+input { padding-top:0; padding-bottom:0; font-family: "SimSun","宋体";}
+select, input { vertical-align:middle;}
+select, input, textarea { margin:0; }
+textarea { resize:none; }
+img {border:0;	vertical-align:middle; }
+table { border-collapse:collapse; }
+.clearfix:before,.clearfix:after {
+    content:"";
+    display:table;
+}
+.clearfix:after{clear:both;}
+.clearfix{
+    *zoom:1;/*IE/7/6*/
+}
+a {text-decoration:none; color: #111;}
+h1,h2,h3,h4,h5,h6 {text-decoration:none;font-weight:normal;font-size:100%;}
+s,i,em{font-style:normal;text-decoration:none;}
+
+/*start*/
+body{
+  background-color: #F5F5F5;
+}
+.layout{
+	max-width: 640px;
+	min-width: 300px;
+	width: 100%;
+	margin: 0px auto;
+}
+/*header*/
+header{
+	height: 44px;
+	background-color: #91D4DA;
+	position: relative;
+	font: 18px/44px 'microsoft yahei';
+	color: #fff;
+}
+header h1{
+	text-align: center;
+}
+header .back-btn{
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #fff;
+}
+
+/*nav*/
+nav{
+	height: 44px;
+  background-color: #fff;
+}
+nav ul{
+	margin: 0 10px;
+	height: 100%;
+	font: 16px/44px 'microsoft yahei';
+	display: flex;
+}
+nav ul li{
+	width: 25%;
+}
+nav ul li a{
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	position: relative;
+}
+a.selected::after{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 2px;
+	background-color: #94D3DA;
+}
+
+/* section */
+section{
+  margin-bottom: 36px;
+  background-color: #fff;
+}
+
+/*img-box*/
+.img-box{
+
+}
+.img-box .imgs{
+	width: 100%;
+	height: 300px;
+	overflow: hidden;
+}
+.img-box .imgs img{
+	width: 100%;
+
+}
+.img-box .tags{
+
+}
+.img-box .tags ul{
+	margin: 0 10px;
+	display: flex;
+	position: relative;
+}
+.img-box .tags li{
+	width: 25%;
+}
+.img-box .tags li a.icon-a{
+	padding: 10px;
+	width: 80px;
+	height: 80px;
+}
+.img-box .tags li a{
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	position: relative;
+}
+.img-box .columns{
+
+}
+.img-box .columns ul{
+	display: flex;
+	padding: 30px 0;
+	/*border-bottom: 2px solid #DEDEDE;*/
+}
+.img-box .columns li{
+	flex: 1;
+	padding: 20px;
+}
+.img-box .columns li+li{
+	border-left: 1px solid #DFDFDF;
+}
+/*.img-box .columns li+li::before{
+
+}*/
+.img-box .columns li img{
+	width: 100%;
+	height: 100%;
+}
+
+.module-box{
+
+}
+
+.module-box .title{
+  
+}
