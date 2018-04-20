@@ -1,0 +1,45 @@
+/*css init*/
+html, body,div { margin:0; padding:0; }
+/*start*/
+body{
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items:center;
+  flex-wrap: nowrap;
+}
+div{
+  width: 150px;
+  border:1px solid #f00;
+  padding: 20px;
+}
+div.div1{
+  height: 120px;
+}
+div.div2{
+  height: 100px;
+}
+div.div3{
+  height: 40px;
+}
+div.div4{
+  height: 200px;
+  border-color: #0f0;
+}
+@media (min-width : 640px){
+  body{
+    flex-wrap: wrap;
+  }
+  div.div4{
+    
+  }
+  /* div.div1{
+    height: 120px;
+  }
+  div.div2{
+    height: 100px;
+  }
+  div.div3{
+    height: 40px;
+  } */
+}
