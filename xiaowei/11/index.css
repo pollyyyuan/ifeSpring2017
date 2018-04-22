@@ -143,9 +143,50 @@ section{
 }
 
 .module-box{
-
+  padding: 20px;
 }
 
 .module-box .title{
-  
+  border-bottom: 2px solid #f5f5f5;
+}
+.module-box .content{
+  padding: 20px 0;
+}
+.module-box .content>div{
+  float: left;
+}
+.module-box .content:after{
+  content: '';
+  display: table;
+  clear: both;
+}
+.module-box .imgs{
+  width: 200px;
+  margin-right: 20px;
+}
+.module-box .imgs li+li{
+  margin-top:20px;
+}
+.module-box .imgs img{
+  width: 200px;
+  height: 220px;
+}
+.module-box .urls{
+  width: 350px;
+}
+.module-box .urls ul{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.module-box .urls li{
+  flex :140px;
+  text-align: center;
+  background-color: #f5f5f5;
+  font :16px/24px 'microsoft yahei';
+  margin: 10px 0;
+  padding: 10px 0;
+}
+.module-box .urls li a {
+
 }
