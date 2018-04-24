@@ -44,8 +44,14 @@ header h1{
 header .back-btn{
 	position: absolute;
 	top: 0;
-	left: 0;
+	left: 26px;
 	color: #fff;
+}
+header .back-btn i{
+  position: absolute;
+  left: -24px;
+	font-size: 26px;
+  line-height: 44px;
 }
 
 /*nav*/
@@ -98,38 +104,69 @@ section{
 
 }
 .img-box .tags{
-
+  padding: 20px;
 }
 .img-box .tags ul{
-	margin: 0 10px;
 	display: flex;
 	position: relative;
 }
 .img-box .tags li{
-	width: 25%;
+  /* flex : 1; */
+	width: 20%;
 }
-.img-box .tags li a.icon-a{
-	padding: 10px;
-	width: 80px;
-	height: 80px;
-}
+/* .img-box .tags li + li {
+  margin-left: 20px;
+} */
+
 .img-box .tags li a{
 	display: inline-block;
-	width: 100%;
+	/* width: 100%; */
 	text-align: center;
 	position: relative;
 }
-.img-box .columns{
+.img-box .tags li a.icon-a{
+  /* width: 80px; */
+  /* height: 80px; */
+  width: 100%;
+  margin:auto;
+  /* margin: 10px;
+  margin-top: 0; */
+  border-radius: 50%;
+  background-color: #01C6D6;
+}
+.img-box .tags li .icon-activity{
+  font-size: 60px;
+  color: #fff;
+  position: relative;
+  top:10%;
+}
 
+.img-box .tags li a.tag{
+  width: 80px;
+  margin: 10px;
+}
+
+.img-box .columns{
+  padding: 20px;
+  position: relative;
+}
+.img-box .columns::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 10px;
+  right: 10px;
+  height: 2px;
+  background-color: #DFDFDF;
 }
 .img-box .columns ul{
 	display: flex;
-	padding: 30px 0;
+	/* padding: 30px 0; */
 	/*border-bottom: 2px solid #DEDEDE;*/
 }
 .img-box .columns li{
 	flex: 1;
-	padding: 20px;
+	padding: 10px 20px;
 }
 .img-box .columns li+li{
 	border-left: 1px solid #DFDFDF;
@@ -139,18 +176,29 @@ section{
 }*/
 .img-box .columns li img{
 	width: 100%;
-	height: 100%;
+	height: 148px;
+}
+.img-box .columns h2{
+	text-align: center;
+  font : 22px/40px 'microsoft yahei';
+}
+.img-box .columns h3{
+	text-align: center;
+  font : 18px/30px 'microsoft yahei';
+  color: #5C5C5C;
 }
 
 .module-box{
-  padding: 20px;
+  padding: 0 20px;
 }
 
 .module-box .title{
+  height: 44px;
   border-bottom: 2px solid #f5f5f5;
+  font : 16px/44px 'microsoft yahei';
 }
 .module-box .content{
-  padding: 20px 0;
+  padding-top: 20px;
 }
 .module-box .content>div{
   float: left;
@@ -161,18 +209,22 @@ section{
   clear: both;
 }
 .module-box .imgs{
-  width: 200px;
+  width: 170px;
   margin-right: 20px;
+}
+.module-box .imgs li{
+  height: 148px;
+  border : 1px solid #94D3DA;
 }
 .module-box .imgs li+li{
   margin-top:20px;
 }
 .module-box .imgs img{
-  width: 200px;
-  height: 220px;
+  width: 100%;
+  height: 100%;
 }
 .module-box .urls{
-  width: 350px;
+  width: 410px;
 }
 .module-box .urls ul{
   display: flex;
@@ -184,9 +236,88 @@ section{
   text-align: center;
   background-color: #f5f5f5;
   font :16px/24px 'microsoft yahei';
-  margin: 10px 0;
-  padding: 10px 0;
+  margin-bottom: 20px;
+  padding: 20px 0;
+}
+
+.module-box .urls li:nth-child(2n+1){
+  margin-right: 20px;
 }
 .module-box .urls li a {
 
 }
+
+/* article-box */
+.article-box{
+
+}
+.article-box li{
+  padding :20px;
+}
+.article-box li + li{
+  border-top : 2px solid #F4F4F4;
+}
+.article-box li:after{
+  content: '';
+  clear: both;
+  display: table;
+}
+.article-box .imgs{
+  float: left;
+  width: 200px;
+  height: 148px;
+  margin-right: 20px;
+}
+.article-box .imgs img{
+  width: 100%;
+  height: 100%;
+}
+
+.article-box .titles{
+  float: left;
+}
+.article-box h1{
+  height: 130px;
+  font :700 22px/24px 'microsoft yahei';
+  color: #676767;
+}
+.article-box  p{
+  font :16px/16px 'microsoft yahei';
+  color: #C8C8C8;
+}
+
+.article-box .li-3floor .imgs {
+  display: flex;
+  float: none;
+  margin-bottom: 10px;
+}
+.article-box .li-3floor .title h1 {
+  height: 40px;
+}
+.article-box .li-3floor .imgs img{
+  flex : 1;
+}
+.article-box .li-3floor .imgs img +img {
+  margin-left : 2px;
+}
+
+/* font */
+@font-face {font-family: "iconfont";
+  src: url('fonts/iconfont.eot?t=1524549368252'); /* IE9*/
+  src: url('fonts/iconfont.eot?t=1524549368252#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff;charset=utf-8;base64,d09GRgABAAAAAAWwAAsAAAAACGgAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABHU1VCAAABCAAAADMAAABCsP6z7U9TLzIAAAE8AAAARAAAAFZW7kkMY21hcAAAAYAAAABoAAABnNC0b4pnbHlmAAAB6AAAAccAAAIsihO0GWhlYWQAAAOwAAAALwAAADYRKRPuaGhlYQAAA+AAAAAcAAAAJAfeA4VobXR4AAAD/AAAABAAAAAQD+kAAGxvY2EAAAQMAAAACgAAAAoBjADybWF4cAAABBgAAAAfAAAAIAETAGRuYW1lAAAEOAAAAUUAAAJtPlT+fXBvc3QAAAWAAAAALgAAAD82d1W3eJxjYGRgYOBikGPQYWB0cfMJYeBgYGGAAJAMY05meiJQDMoDyrGAaQ4gZoOIAgCKIwNPAHicY2Bk/sU4gYGVgYOpk+kMAwNDP4RmfM1gxMjBwMDEwMrMgBUEpLmmMDgwVDxXYG7438AQw9zA0AAUZgTJAQAmdgyPeJxjYGBgZWBgYAZiHSBmYWBgzGBgZACBJKAoI1icmYELLM7CYAbkcwAhE5CueHbvucL//ygsEGAEq+AAs5hAJjOyMQwYYBw4q1EBD5g0gfJA4V0BxUAnPrsHwaBwfa4AwQzMAMOHE294nFWRy27TUBCG5z8H27FJnOT4Fttx4kscFxUiNXHKAjXJAhZcFkgsKhZI9AHabSWERDYgFix4AaQKIfEGrLpItrwAbFggeABeIC52K6pyNGf+mVmM5pshiejsJz/lHTJoi3boLj0mgryNWGcBoiwfsW1YkWQ5ps6zJIuUJB7xPTixbNrj3XzoyIrchI4eJtF4NxuxDNN8xu5gbAeA63tPRNoV/D20TtZ7XTxgH2H1k25zdqu4f3NujkOjdlwXwhXiXU2WpBpj15o6Dh1blVRNLj5JTc867d9gfdTdzHv0tBH64uBtfhSkjgoslzD8UP88b3vt0l56tiFcpdWodbxGMjBx/Pt6x6gHw19Uvor1D3/OQ1KoT3N6SPtEqTyJ4mk7SvOdiVUh7eFSS4IoTab5MJYDXKoOpd2DE81wuz0ComoLSVTtw7kS8xDYrMEWm9VSdMWq/K+wWbHFv2zpD4CBzxbnWtwD6ULoZ+f+SjzhHD8+8FZVaF14sGcn/+XD7uZNkAJpwF4EaXFQdi/t5ELKc1bwbM3W1Cp5VZQzxgpk04E9Q86+FN+xpQlPK1aahoXmin30YaieqRbfNF8rvqowXKK/W29YLAB4nGNgZGBgAOIIZTb2eH6brwzcLAwgcJ3l+Q8E/f8hCwOzApDLwcAEEgUA/xAJvgB4nGNgZGBgbvjfwBDDwgACQJKRARWwAABHCgJtBAAAAAPpAAAEAAAABAAAAAAAAAAAdgDyARYAAHicY2BkYGBgYYhgYGUAASYg5gJCBob/YD4DABHBAXgAeJxlj01OwzAQhV/6B6QSqqhgh+QFYgEo/RGrblhUavdddN+mTpsqiSPHrdQDcB6OwAk4AtyAO/BIJ5s2lsffvHljTwDc4Acejt8t95E9XDI7cg0XuBeuU38QbpBfhJto41W4Rf1N2MczpsJtdGF5g9e4YvaEd2EPHXwI13CNT+E69S/hBvlbuIk7/Aq30PHqwj7mXle4jUcv9sdWL5xeqeVBxaHJIpM5v4KZXu+Sha3S6pxrW8QmU4OgX0lTnWlb3VPs10PnIhVZk6oJqzpJjMqt2erQBRvn8lGvF4kehCblWGP+tsYCjnEFhSUOjDFCGGSIyujoO1Vm9K+xQ8Jee1Y9zed0WxTU/3OFAQL0z1xTurLSeTpPgT1fG1J1dCtuy56UNJFezUkSskJe1rZUQuoBNmVXjhF6XNGJPyhnSP8ACVpuyAAAAHicY2BigAAuBuyAhZGJkZmRhZGVgbGCIzG5JLMss6SSrSi1pLQoj4EBAEr+BrcAAA==') format('woff'),
+  url('fonts/iconfont.ttf?t=1524549368252') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('fonts/iconfont.svg?t=1524549368252#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  font-family:"iconfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-activity:before { content: "\e6de"; }
+
+.icon-return:before { content: "\e720"; }
